@@ -25,7 +25,7 @@ public class MonthNameStepdefs {
 
     @Then("I should get {string}")
     public void iShouldGet(String expectedMonthname) {
-        String name = actualMonthname.orElseThrow(() -> new RuntimeException("No existe un nombre de mes para el número " + monthnumber));
+        var name = actualMonthname.orElseThrow(() -> new RuntimeException("No existe un nombre de mes para el número " + monthnumber));
         assertEquals(expectedMonthname, name);
     }
 }
